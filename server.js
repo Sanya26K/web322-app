@@ -5,7 +5,7 @@
 * 
 *  Name:  Sanya Khurana    Student ID:  146381215    Date:  3rd Feb,2023
 *
-*  Cyclic Web App URL: ___https://drab-blue-salmon-ring.cyclic.app/___
+*  Cyclic Web App URL: https://drab-blue-salmon-ring.cyclic.app
 *
 *  GitHub Repository URL: ___https://github.com/Sanya26K/web322-app ______
 *

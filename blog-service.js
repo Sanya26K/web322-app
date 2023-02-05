@@ -7,24 +7,27 @@ let categories = [];
 
 function initialize() {
     return new Promise((resolve, reject) => {
-        fs.readFile(path.join(__dirname, "data", "posts.json"), 'utf8', (err, data) => {
-            if (err) {
-              reject("Unable to read posts file");
-            }
-
-            posts = JSON.parse(data);
-
-            fs.readFile(path.join(__dirname, "data", "categories.json"), 'utf8', (err, data) => {
-                if (err) {
-                  reject("Unable to read categories file");
-                }
-                categories = JSON.parse(data);
-                resolve();
-              });
-          });
-    })
-}
-
+      fs.readFile('./data/posts.json', 'utf8', (err, data) => {
+        if (err) {
+          reject("Unable to read posts file");
+          return;
+        }
+  
+        posts = JSON.parse(data);
+  
+        fs.readFile('./data/categories.json', 'utf8', (err, data) => {
+          if (err) {
+            reject("Unable to read categories file");
+            return;
+          }
+  
+          categories = JSON.parse(data);
+          resolve();
+        });
+      });
+    });
+  }
+  
 function getAllPosts() {
     return new Promise((resolve, reject) => {
         if (posts.length === 0) {
